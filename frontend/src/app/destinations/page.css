@@ -1,0 +1,194 @@
+.destinations-page {
+  background: var(--bg-light);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.dest-hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 180px 20px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dest-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/dest_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.dest-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 48, 87, 0.9) 0%, rgba(0, 48, 87, 0.6) 100%);
+  z-index: 2;
+}
+
+.dest-hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  max-width: 800px;
+}
+
+.dest-hero-content .hero-tagline {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.dest-hero-content h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.dest-hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Destinations List */
+.destinations-list-section {
+  padding: 80px 0;
+}
+
+.destinations-grid-full {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.dest-card-full {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.dest-card-full:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.dest-card-full .dest-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.dest-card-full:hover .dest-image {
+  transform: scale(1.05);
+}
+
+.dest-card-full .dest-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--accent);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(255, 114, 0, 0.3);
+}
+
+.dest-card-full .dest-info {
+  padding: 35px;
+  background: white;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dest-card-full h3 {
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.dest-card-full p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.dest-card-full .dest-btn {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.dest-card-full .dest-btn:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+  .destinations-grid-full {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dest-hero {
+    padding-top: 140px;
+  }
+  .dest-hero-content h1 {
+    font-size: 36px;
+  }
+}
+
+/* Bottom CTA Section */
+.dest-bottom-cta {
+  padding: 80px 0;
+  background: var(--bg-light);
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.dest-bottom-cta h2 {
+  color: var(--primary);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.dest-bottom-cta p {
+  color: var(--text-muted);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}

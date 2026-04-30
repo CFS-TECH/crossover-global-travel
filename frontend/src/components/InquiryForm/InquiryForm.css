@@ -1,0 +1,106 @@
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: formSlideUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes formSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inquiry-form input,
+.inquiry-form select {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
+  font-size: 15px;
+  transition: var(--transition);
+  color: var(--text-main);
+}
+
+.inquiry-form input:focus,
+.inquiry-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 10px 25px rgba(242, 116, 32, 0.15);
+  transform: translateY(-2px);
+}
+
+.inquiry-form input:hover,
+.inquiry-form select:hover {
+  border-color: var(--silver-dark);
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.form-disclaimer {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.form-success {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: #10B981;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+}
+
+.form-success h4 {
+  font-size: 24px;
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.form-success p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}

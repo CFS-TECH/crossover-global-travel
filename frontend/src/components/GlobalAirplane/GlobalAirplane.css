@@ -1,0 +1,62 @@
+.global-airplane-system {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999; /* Above everything but mobile menu */
+  overflow: hidden;
+}
+
+.global-plane {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: rgba(242, 116, 32, 0.1); /* Subtle accent color */
+  opacity: 0;
+}
+
+.plane-1 {
+  animation: globalFlight1 40s linear infinite;
+  animation-delay: 5s;
+}
+
+.plane-2 {
+  animation: globalFlight2 50s linear infinite;
+  animation-delay: 25s;
+}
+
+@keyframes globalFlight1 {
+  0% {
+    left: -5%;
+    top: 15%;
+    transform: rotate(5deg) scale(0.6);
+    opacity: 0;
+  }
+  5% { opacity: 0.4; }
+  95% { opacity: 0.4; }
+  100% {
+    left: 105%;
+    top: 10%;
+    transform: rotate(0deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes globalFlight2 {
+  0% {
+    left: 105%;
+    top: 70%;
+    transform: rotate(185deg) scale(0.5);
+    opacity: 0;
+  }
+  5% { opacity: 0.3; }
+  95% { opacity: 0.3; }
+  100% {
+    left: -5%;
+    top: 75%;
+    transform: rotate(180deg) scale(0.5);
+    opacity: 0;
+  }
+}
