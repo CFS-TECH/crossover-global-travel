@@ -370,14 +370,21 @@
   .bottom-inner {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
   }
   .bottom-inner p {
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 13px;
   }
   .bottom-links {
+    display: flex;
+    flex-direction: row; /* Force same row */
     justify-content: center;
-    margin-top: 10px;
-    gap: 25px;
+    gap: 20px;
+    margin-top: 5px;
+  }
+  .bottom-links a {
+    font-size: 13px;
+    white-space: nowrap; /* Prevent wrapping */
   }
 }
